@@ -1,0 +1,463 @@
+D:\Python\Python3\lib\site-packages\h5py\__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+2018-04-22 23:53:24.174071: I C:\tf_jenkins\workspace\rel-win\M\windows-gpu\PY\35\tensorflow\core\platform\cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX
+2018-04-22 23:53:24.496452: I C:\tf_jenkins\workspace\rel-win\M\windows-gpu\PY\35\tensorflow\core\common_runtime\gpu\gpu_device.cc:1105] Found device 0 with properties:
+name: GeForce GTX 1070 major: 6 minor: 1 memoryClockRate(GHz): 1.835
+pciBusID: 0000:01:00.0
+totalMemory: 8.00GiB freeMemory: 6.63GiB
+2018-04-22 23:53:24.502269: I C:\tf_jenkins\workspace\rel-win\M\windows-gpu\PY\35\tensorflow\core\common_runtime\gpu\gpu_device.cc:1195] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0, compute capability: 6.1)
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+cropping2d_1 (Cropping2D)    (None, 75, 320, 3)        0
+_________________________________________________________________
+lambda_1 (Lambda)            (None, 75, 320, 3)        0
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 36, 79, 24)        1824
+_________________________________________________________________
+batch_normalization_1 (Batch (None, 36, 79, 24)        96
+_________________________________________________________________
+relu_1 (Activation)          (None, 36, 79, 24)        0
+_________________________________________________________________
+pool_1 (MaxPooling2D)        (None, 17, 39, 24)        0
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 17, 39, 32)        6944
+_________________________________________________________________
+batch_normalization_2 (Batch (None, 17, 39, 32)        128
+_________________________________________________________________
+relu_2 (Activation)          (None, 17, 39, 32)        0
+_________________________________________________________________
+pool_2 (MaxPooling2D)        (None, 8, 19, 32)         0
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 8, 19, 48)         13872
+_________________________________________________________________
+batch_normalization_3 (Batch (None, 8, 19, 48)         192
+_________________________________________________________________
+relu_3 (Activation)          (None, 8, 19, 48)         0
+_________________________________________________________________
+pool_3 (MaxPooling2D)        (None, 3, 9, 48)          0
+_________________________________________________________________
+conv2d_4 (Conv2D)            (None, 1, 1, 64)          83008
+_________________________________________________________________
+batch_normalization_4 (Batch (None, 1, 1, 64)          256
+_________________________________________________________________
+relu_4 (Activation)          (None, 1, 1, 64)          0
+_________________________________________________________________
+dropout_4 (Dropout)          (None, 1, 1, 64)          0
+_________________________________________________________________
+conv2d_5 (Conv2D)            (None, 1, 1, 16)          1040
+_________________________________________________________________
+batch_normalization_5 (Batch (None, 1, 1, 16)          64
+_________________________________________________________________
+relu_6 (Activation)          (None, 1, 1, 16)          0
+_________________________________________________________________
+conv2d_6 (Conv2D)            (None, 1, 1, 1)           17
+_________________________________________________________________
+reshape_1 (Reshape)          (None, 1)                 0
+=================================================================
+Total params: 107,441
+Trainable params: 107,073
+Non-trainable params: 368
+_________________________________________________________________
+Epoch 1/100
+
+Epoch 00001: LearningRateScheduler reducing learning rate to 0.01.
+100/100 [==============================] - 215s 2s/step - loss: 2.4488 - val_loss: 0.5591
+Epoch 2/100
+
+Epoch 00002: LearningRateScheduler reducing learning rate to 0.01.
+100/100 [==============================] - 202s 2s/step - loss: 0.3926 - val_loss: 0.2542
+Epoch 3/100
+
+Epoch 00003: LearningRateScheduler reducing learning rate to 0.01.
+100/100 [==============================] - 194s 2s/step - loss: 0.2685 - val_loss: 0.2249
+Epoch 4/100
+
+Epoch 00004: LearningRateScheduler reducing learning rate to 0.01.
+100/100 [==============================] - 193s 2s/step - loss: 0.2126 - val_loss: 0.1307
+Epoch 5/100
+
+Epoch 00005: LearningRateScheduler reducing learning rate to 0.01.
+100/100 [==============================] - 190s 2s/step - loss: 0.1472 - val_loss: 0.1173
+Epoch 6/100
+
+Epoch 00006: LearningRateScheduler reducing learning rate to 0.01.
+100/100 [==============================] - 189s 2s/step - loss: 0.1436 - val_loss: 0.1325
+Epoch 7/100
+
+Epoch 00007: LearningRateScheduler reducing learning rate to 0.01.
+100/100 [==============================] - 189s 2s/step - loss: 0.1452 - val_loss: 0.1252
+Epoch 8/100
+
+Epoch 00008: LearningRateScheduler reducing learning rate to 0.01.
+100/100 [==============================] - 191s 2s/step - loss: 0.1424 - val_loss: 0.1324
+Epoch 9/100
+
+Epoch 00009: LearningRateScheduler reducing learning rate to 0.01.
+100/100 [==============================] - 181s 2s/step - loss: 0.1370 - val_loss: 0.1286
+Epoch 10/100
+
+Epoch 00010: LearningRateScheduler reducing learning rate to 0.01.
+100/100 [==============================] - 180s 2s/step - loss: 0.1530 - val_loss: 0.1432
+Epoch 11/100
+
+Epoch 00011: LearningRateScheduler reducing learning rate to 0.01.
+100/100 [==============================] - 188s 2s/step - loss: 0.1556 - val_loss: 0.1552
+Epoch 12/100
+
+Epoch 00012: LearningRateScheduler reducing learning rate to 0.01.
+100/100 [==============================] - 183s 2s/step - loss: 0.1481 - val_loss: 0.1349
+Epoch 13/100
+
+Epoch 00013: LearningRateScheduler reducing learning rate to 0.01.
+100/100 [==============================] - 193s 2s/step - loss: 0.1609 - val_loss: 0.1503
+Epoch 14/100
+
+Epoch 00014: LearningRateScheduler reducing learning rate to 0.01.
+100/100 [==============================] - 179s 2s/step - loss: 0.1880 - val_loss: 0.1537
+Epoch 15/100
+
+Epoch 00015: LearningRateScheduler reducing learning rate to 0.01.
+100/100 [==============================] - 208s 2s/step - loss: 0.1802 - val_loss: 0.1421
+Epoch 16/100
+
+Epoch 00016: LearningRateScheduler reducing learning rate to 0.01.
+100/100 [==============================] - 179s 2s/step - loss: 0.1643 - val_loss: 0.1473
+Epoch 17/100
+
+Epoch 00017: LearningRateScheduler reducing learning rate to 0.01.
+100/100 [==============================] - 197s 2s/step - loss: 0.1671 - val_loss: 0.2393
+Epoch 18/100
+
+Epoch 00018: LearningRateScheduler reducing learning rate to 0.01.
+100/100 [==============================] - 193s 2s/step - loss: 0.1842 - val_loss: 0.2598
+Epoch 19/100
+
+Epoch 00019: LearningRateScheduler reducing learning rate to 0.01.
+100/100 [==============================] - 185s 2s/step - loss: 0.1858 - val_loss: 0.1885
+Epoch 20/100
+
+Epoch 00020: LearningRateScheduler reducing learning rate to 0.01.
+100/100 [==============================] - 199s 2s/step - loss: 0.1884 - val_loss: 0.4724
+Epoch 21/100
+
+Epoch 00021: LearningRateScheduler reducing learning rate to 0.001.
+100/100 [==============================] - 191s 2s/step - loss: 0.0533 - val_loss: 0.0253
+Epoch 22/100
+
+Epoch 00022: LearningRateScheduler reducing learning rate to 0.001.
+100/100 [==============================] - 181s 2s/step - loss: 0.0254 - val_loss: 0.0223
+Epoch 23/100
+
+Epoch 00023: LearningRateScheduler reducing learning rate to 0.001.
+100/100 [==============================] - 187s 2s/step - loss: 0.0246 - val_loss: 0.0211
+Epoch 24/100
+
+Epoch 00024: LearningRateScheduler reducing learning rate to 0.001.
+100/100 [==============================] - 180s 2s/step - loss: 0.0226 - val_loss: 0.0314
+Epoch 25/100
+
+Epoch 00025: LearningRateScheduler reducing learning rate to 0.001.
+100/100 [==============================] - 189s 2s/step - loss: 0.0249 - val_loss: 0.0209
+Epoch 26/100
+
+Epoch 00026: LearningRateScheduler reducing learning rate to 0.001.
+100/100 [==============================] - 204s 2s/step - loss: 0.0237 - val_loss: 0.0370
+Epoch 27/100
+
+Epoch 00027: LearningRateScheduler reducing learning rate to 0.001.
+100/100 [==============================] - 178s 2s/step - loss: 0.0230 - val_loss: 0.0179
+Epoch 28/100
+
+Epoch 00028: LearningRateScheduler reducing learning rate to 0.001.
+100/100 [==============================] - 192s 2s/step - loss: 0.0222 - val_loss: 0.0182
+Epoch 29/100
+
+Epoch 00029: LearningRateScheduler reducing learning rate to 0.001.
+100/100 [==============================] - 196s 2s/step - loss: 0.0234 - val_loss: 0.0953
+Epoch 30/100
+
+Epoch 00030: LearningRateScheduler reducing learning rate to 0.001.
+100/100 [==============================] - 184s 2s/step - loss: 0.0239 - val_loss: 0.0393
+Epoch 31/100
+
+Epoch 00031: LearningRateScheduler reducing learning rate to 0.001.
+100/100 [==============================] - 206s 2s/step - loss: 0.0261 - val_loss: 0.0296
+Epoch 32/100
+
+Epoch 00032: LearningRateScheduler reducing learning rate to 0.001.
+100/100 [==============================] - 179s 2s/step - loss: 0.0248 - val_loss: 0.0246
+Epoch 33/100
+
+Epoch 00033: LearningRateScheduler reducing learning rate to 0.001.
+100/100 [==============================] - 188s 2s/step - loss: 0.0350 - val_loss: 0.0317
+Epoch 34/100
+
+Epoch 00034: LearningRateScheduler reducing learning rate to 0.001.
+100/100 [==============================] - 214s 2s/step - loss: 0.0271 - val_loss: 0.0222
+Epoch 35/100
+
+Epoch 00035: LearningRateScheduler reducing learning rate to 0.001.
+100/100 [==============================] - 209s 2s/step - loss: 0.0262 - val_loss: 0.0207
+Epoch 36/100
+
+Epoch 00036: LearningRateScheduler reducing learning rate to 0.001.
+100/100 [==============================] - 178s 2s/step - loss: 0.0233 - val_loss: 0.0209
+Epoch 37/100
+
+Epoch 00037: LearningRateScheduler reducing learning rate to 0.001.
+100/100 [==============================] - 200s 2s/step - loss: 0.0244 - val_loss: 0.0201
+Epoch 38/100
+
+Epoch 00038: LearningRateScheduler reducing learning rate to 0.001.
+100/100 [==============================] - 211s 2s/step - loss: 0.0249 - val_loss: 0.0230
+Epoch 39/100
+
+Epoch 00039: LearningRateScheduler reducing learning rate to 0.001.
+100/100 [==============================] - 213s 2s/step - loss: 0.0245 - val_loss: 0.0288
+Epoch 40/100
+
+Epoch 00040: LearningRateScheduler reducing learning rate to 0.001.
+100/100 [==============================] - 210s 2s/step - loss: 0.0256 - val_loss: 0.0225
+Epoch 41/100
+
+Epoch 00041: LearningRateScheduler reducing learning rate to 0.0001.
+100/100 [==============================] - 193s 2s/step - loss: 0.0132 - val_loss: 0.0068
+Epoch 42/100
+
+Epoch 00042: LearningRateScheduler reducing learning rate to 0.0001.
+100/100 [==============================] - 190s 2s/step - loss: 0.0103 - val_loss: 0.0064
+Epoch 43/100
+
+Epoch 00043: LearningRateScheduler reducing learning rate to 0.0001.
+100/100 [==============================] - 193s 2s/step - loss: 0.0101 - val_loss: 0.0062
+Epoch 44/100
+
+Epoch 00044: LearningRateScheduler reducing learning rate to 0.0001.
+100/100 [==============================] - 207s 2s/step - loss: 0.0098 - val_loss: 0.0059
+Epoch 45/100
+
+Epoch 00045: LearningRateScheduler reducing learning rate to 0.0001.
+100/100 [==============================] - 190s 2s/step - loss: 0.0095 - val_loss: 0.0057
+Epoch 46/100
+
+Epoch 00046: LearningRateScheduler reducing learning rate to 0.0001.
+100/100 [==============================] - 199s 2s/step - loss: 0.0093 - val_loss: 0.0055
+Epoch 47/100
+
+Epoch 00047: LearningRateScheduler reducing learning rate to 0.0001.
+100/100 [==============================] - 193s 2s/step - loss: 0.0091 - val_loss: 0.0056
+Epoch 48/100
+
+Epoch 00048: LearningRateScheduler reducing learning rate to 0.0001.
+100/100 [==============================] - 190s 2s/step - loss: 0.0091 - val_loss: 0.0060
+Epoch 49/100
+
+Epoch 00049: LearningRateScheduler reducing learning rate to 0.0001.
+100/100 [==============================] - 192s 2s/step - loss: 0.0091 - val_loss: 0.0071
+Epoch 50/100
+
+Epoch 00050: LearningRateScheduler reducing learning rate to 0.0001.
+100/100 [==============================] - 196s 2s/step - loss: 0.0091 - val_loss: 0.0062
+Epoch 51/100
+
+Epoch 00051: LearningRateScheduler reducing learning rate to 0.0001.
+100/100 [==============================] - 208s 2s/step - loss: 0.0090 - val_loss: 0.0068
+Epoch 52/100
+
+Epoch 00052: LearningRateScheduler reducing learning rate to 0.0001.
+100/100 [==============================] - 199s 2s/step - loss: 0.0090 - val_loss: 0.0087
+Epoch 53/100
+
+Epoch 00053: LearningRateScheduler reducing learning rate to 0.0001.
+100/100 [==============================] - 200s 2s/step - loss: 0.0087 - val_loss: 0.0064
+Epoch 54/100
+
+Epoch 00054: LearningRateScheduler reducing learning rate to 0.0001.
+100/100 [==============================] - 205s 2s/step - loss: 0.0089 - val_loss: 0.0080
+Epoch 55/100
+
+Epoch 00055: LearningRateScheduler reducing learning rate to 0.0001.
+100/100 [==============================] - 200s 2s/step - loss: 0.0088 - val_loss: 0.0070
+Epoch 56/100
+
+Epoch 00056: LearningRateScheduler reducing learning rate to 0.0001.
+100/100 [==============================] - 201s 2s/step - loss: 0.0088 - val_loss: 0.0071
+Epoch 57/100
+
+Epoch 00057: LearningRateScheduler reducing learning rate to 0.0001.
+100/100 [==============================] - 200s 2s/step - loss: 0.0087 - val_loss: 0.0074
+Epoch 58/100
+
+Epoch 00058: LearningRateScheduler reducing learning rate to 0.0001.
+100/100 [==============================] - 199s 2s/step - loss: 0.0088 - val_loss: 0.0086
+Epoch 59/100
+
+Epoch 00059: LearningRateScheduler reducing learning rate to 0.0001.
+100/100 [==============================] - 214s 2s/step - loss: 0.0088 - val_loss: 0.0082
+Epoch 60/100
+
+Epoch 00060: LearningRateScheduler reducing learning rate to 0.0001.
+100/100 [==============================] - 204s 2s/step - loss: 0.0088 - val_loss: 0.0074
+Epoch 61/100
+
+Epoch 00061: LearningRateScheduler reducing learning rate to 1e-05.
+100/100 [==============================] - 200s 2s/step - loss: 0.0077 - val_loss: 0.0043
+Epoch 62/100
+
+Epoch 00062: LearningRateScheduler reducing learning rate to 1e-05.
+100/100 [==============================] - 202s 2s/step - loss: 0.0074 - val_loss: 0.0044
+Epoch 63/100
+
+Epoch 00063: LearningRateScheduler reducing learning rate to 1e-05.
+100/100 [==============================] - 205s 2s/step - loss: 0.0074 - val_loss: 0.0042
+Epoch 64/100
+
+Epoch 00064: LearningRateScheduler reducing learning rate to 1e-05.
+100/100 [==============================] - 205s 2s/step - loss: 0.0074 - val_loss: 0.0042
+Epoch 65/100
+
+Epoch 00065: LearningRateScheduler reducing learning rate to 1e-05.
+100/100 [==============================] - 205s 2s/step - loss: 0.0073 - val_loss: 0.0044
+Epoch 66/100
+
+Epoch 00066: LearningRateScheduler reducing learning rate to 1e-05.
+100/100 [==============================] - 198s 2s/step - loss: 0.0074 - val_loss: 0.0044
+Epoch 67/100
+
+Epoch 00067: LearningRateScheduler reducing learning rate to 1e-05.
+100/100 [==============================] - 203s 2s/step - loss: 0.0074 - val_loss: 0.0042
+Epoch 68/100
+
+Epoch 00068: LearningRateScheduler reducing learning rate to 1e-05.
+100/100 [==============================] - 198s 2s/step - loss: 0.0073 - val_loss: 0.0043
+Epoch 69/100
+
+Epoch 00069: LearningRateScheduler reducing learning rate to 1e-05.
+100/100 [==============================] - 207s 2s/step - loss: 0.0074 - val_loss: 0.0043
+Epoch 70/100
+
+Epoch 00070: LearningRateScheduler reducing learning rate to 1e-05.
+100/100 [==============================] - 192s 2s/step - loss: 0.0074 - val_loss: 0.0044
+Epoch 71/100
+
+Epoch 00071: LearningRateScheduler reducing learning rate to 1e-05.
+100/100 [==============================] - 192s 2s/step - loss: 0.0073 - val_loss: 0.0044
+Epoch 72/100
+
+Epoch 00072: LearningRateScheduler reducing learning rate to 1e-05.
+100/100 [==============================] - 207s 2s/step - loss: 0.0074 - val_loss: 0.0043
+Epoch 73/100
+
+Epoch 00073: LearningRateScheduler reducing learning rate to 1e-05.
+100/100 [==============================] - 203s 2s/step - loss: 0.0074 - val_loss: 0.0043
+Epoch 74/100
+
+Epoch 00074: LearningRateScheduler reducing learning rate to 1e-05.
+100/100 [==============================] - 193s 2s/step - loss: 0.0073 - val_loss: 0.0044
+Epoch 75/100
+
+Epoch 00075: LearningRateScheduler reducing learning rate to 1e-05.
+100/100 [==============================] - 204s 2s/step - loss: 0.0073 - val_loss: 0.0044
+Epoch 76/100
+
+Epoch 00076: LearningRateScheduler reducing learning rate to 1e-05.
+100/100 [==============================] - 205s 2s/step - loss: 0.0073 - val_loss: 0.0044
+Epoch 77/100
+
+Epoch 00077: LearningRateScheduler reducing learning rate to 1e-05.
+100/100 [==============================] - 203s 2s/step - loss: 0.0072 - val_loss: 0.0044
+Epoch 78/100
+
+Epoch 00078: LearningRateScheduler reducing learning rate to 1e-05.
+100/100 [==============================] - 198s 2s/step - loss: 0.0073 - val_loss: 0.0040
+Epoch 79/100
+
+Epoch 00079: LearningRateScheduler reducing learning rate to 1e-05.
+100/100 [==============================] - 205s 2s/step - loss: 0.0074 - val_loss: 0.0044
+Epoch 80/100
+
+Epoch 00080: LearningRateScheduler reducing learning rate to 1e-05.
+100/100 [==============================] - 199s 2s/step - loss: 0.0073 - val_loss: 0.0044
+Epoch 81/100
+
+Epoch 00081: LearningRateScheduler reducing learning rate to 1e-06.
+100/100 [==============================] - 205s 2s/step - loss: 0.0072 - val_loss: 0.0043
+Epoch 82/100
+
+Epoch 00082: LearningRateScheduler reducing learning rate to 1e-06.
+100/100 [==============================] - 206s 2s/step - loss: 0.0071 - val_loss: 0.0042
+Epoch 83/100
+
+Epoch 00083: LearningRateScheduler reducing learning rate to 1e-06.
+100/100 [==============================] - 204s 2s/step - loss: 0.0072 - val_loss: 0.0042
+Epoch 84/100
+
+Epoch 00084: LearningRateScheduler reducing learning rate to 1e-06.
+100/100 [==============================] - 200s 2s/step - loss: 0.0071 - val_loss: 0.0043
+Epoch 85/100
+
+Epoch 00085: LearningRateScheduler reducing learning rate to 1e-06.
+100/100 [==============================] - 205s 2s/step - loss: 0.0072 - val_loss: 0.0042
+Epoch 86/100
+
+Epoch 00086: LearningRateScheduler reducing learning rate to 1e-06.
+100/100 [==============================] - 203s 2s/step - loss: 0.0071 - val_loss: 0.0042
+Epoch 87/100
+
+Epoch 00087: LearningRateScheduler reducing learning rate to 1e-06.
+100/100 [==============================] - 206s 2s/step - loss: 0.0071 - val_loss: 0.0041
+Epoch 88/100
+
+Epoch 00088: LearningRateScheduler reducing learning rate to 1e-06.
+100/100 [==============================] - 204s 2s/step - loss: 0.0072 - val_loss: 0.0042
+Epoch 89/100
+
+Epoch 00089: LearningRateScheduler reducing learning rate to 1e-06.
+100/100 [==============================] - 205s 2s/step - loss: 0.0072 - val_loss: 0.0042
+Epoch 90/100
+
+Epoch 00090: LearningRateScheduler reducing learning rate to 1e-06.
+100/100 [==============================] - 203s 2s/step - loss: 0.0071 - val_loss: 0.0041
+Epoch 91/100
+
+Epoch 00091: LearningRateScheduler reducing learning rate to 1e-06.
+100/100 [==============================] - 205s 2s/step - loss: 0.0071 - val_loss: 0.0042
+Epoch 92/100
+
+Epoch 00092: LearningRateScheduler reducing learning rate to 1e-06.
+100/100 [==============================] - 203s 2s/step - loss: 0.0072 - val_loss: 0.0042
+Epoch 93/100
+
+Epoch 00093: LearningRateScheduler reducing learning rate to 1e-06.
+100/100 [==============================] - 205s 2s/step - loss: 0.0071 - val_loss: 0.0041
+Epoch 94/100
+
+Epoch 00094: LearningRateScheduler reducing learning rate to 1e-06.
+100/100 [==============================] - 201s 2s/step - loss: 0.0071 - val_loss: 0.0041
+Epoch 95/100
+
+Epoch 00095: LearningRateScheduler reducing learning rate to 1e-06.
+100/100 [==============================] - 201s 2s/step - loss: 0.0072 - val_loss: 0.0042
+Epoch 96/100
+
+Epoch 00096: LearningRateScheduler reducing learning rate to 1e-06.
+100/100 [==============================] - 207s 2s/step - loss: 0.0072 - val_loss: 0.0042
+Epoch 97/100
+
+Epoch 00097: LearningRateScheduler reducing learning rate to 1e-06.
+100/100 [==============================] - 205s 2s/step - loss: 0.0072 - val_loss: 0.0042
+Epoch 98/100
+
+Epoch 00098: LearningRateScheduler reducing learning rate to 1e-06.
+100/100 [==============================] - 214s 2s/step - loss: 0.0071 - val_loss: 0.0042
+Epoch 99/100
+
+Epoch 00099: LearningRateScheduler reducing learning rate to 1e-06.
+100/100 [==============================] - 216s 2s/step - loss: 0.0072 - val_loss: 0.0042
+Epoch 100/100
+
+Epoch 00100: LearningRateScheduler reducing learning rate to 1e-06.
+100/100 [==============================] - 217s 2s/step - loss: 0.0072 - val_loss: 0.0042
+dict_keys(['val_loss', 'loss'])
