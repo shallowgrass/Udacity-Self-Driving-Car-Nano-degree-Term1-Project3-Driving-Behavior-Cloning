@@ -9,13 +9,16 @@ The driver behavior cloning project applies the following key steps:
 (1) Data preparation:
     - Collect more training data using simulator
     - Apply data augmentation to enrich the training set
+
 (2) Regression network design:
     - Use compact network to reduce overfitting (model of 100K parameters, of size 1.35MB)
     - Use fully-convolutional network to reduce loss of spatial information caused by flattening
     - Reduce regularization force to balance smooth driving and prediction accuracy
+
 (3) Model training:
     - Feed data using generator and apply data augmentation during training
     - Use callbacks to apply learning rate schedular and save regularly check points
+
 (4) Training process summary:
     - Inspect training process by plotting loss/acc curve
     - Generate video to show driving performance
